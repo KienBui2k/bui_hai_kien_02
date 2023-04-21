@@ -1,0 +1,302 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#main {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#Header {
+    --height: 80px;
+    height: var(--height);
+    background-color: rgb(220, 84, 25);
+    display: flex;
+
+}
+
+
+
+
+#nav>li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav li a {
+    display: block;
+    text-decoration: none;
+    line-height: var(--height);
+    padding: 0 24px;
+}
+
+#nav>li>a {
+    color: #fff;
+    text-transform: uppercase;
+
+}
+
+
+
+.nav-search-btn {
+    margin: 24px 12px;
+    background-color: #fff;
+    align-items: center;
+    display: flex;
+    width: 28px;
+    height: 32px;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 100;
+    color: rgb(220, 84, 25);
+}
+
+.shopping {
+
+    color: #fff;
+    margin: 24px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98px;
+}
+
+#Header>h1 {
+    margin: 22px 20px 22px 40px;
+    font-size: 28px;
+    color: #fff;
+}
+
+#nav>li>a,
+.nav-search-btn,
+.shopping {
+    cursor: pointer;
+}
+
+.nav-bars-btn {
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    /* dùng line height để căn giữa theo chiều dọc  */
+    display: none;
+    margin-left: 8px;
+
+}
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: In linear 0.3s;
+}
+
+#nav-mobile {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 330px;
+    max-width: 100%;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform linear 0.2s;
+}
+
+.nav-mobile-link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 0;
+    font-size: 1rem;
+    margin-top: 24px;
+}
+
+.nav-input {
+    display: none;
+}
+
+
+#container {
+    display: flex;
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    background-color: #b4acac5f;
+}
+
+.container-one {
+    background-color: #b4acac5f;
+    width: 20%;
+}
+
+.container-two {
+    display: flex;
+    width: 80%;
+
+}
+
+.container-info-SP {
+    width: 20%;
+    margin: 4px;
+    background-color: #fff;
+    margin-bottom: 40px;
+}
+
+.container-info {
+    height: 180px;
+    margin-left: 50px;
+
+}
+
+.SP-img {
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 300px;
+    margin: 24px 0;
+}
+
+.SP-img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.container-DMSP {
+    background-color: #fff;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-SP {
+    background-color: #fff;
+    padding: 12px 0 12px 20px;
+    margin-top: 4px;
+}
+
+.container-SP li,
+a {
+    list-style-type: none;
+    text-decoration: none;
+    line-height: 1.6;
+    color: #000;
+}
+
+.container-SP a:hover li {
+    color: red;
+}
+
+.SP-info>h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+
+}
+
+.SP-info>label {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+.SP-info .fa-regular {
+    margin-left: 4px;
+}
+
+.SP-info .span-x {
+    margin-left: 100px;
+}
+
+#footer {
+    border-bottom: 2px solid black;
+    border-top: 2px solid red;
+    margin-bottom: 20px;
+}
+
+.foooter-container {
+    display: flex;
+    margin: 20px auto;
+    width: 90%;
+    height: auto;
+
+}
+
+.footer-item1>h4 {
+    margin: 4px 0 24px 0;
+}
+
+.footer-item1>p,
+span,
+i {
+    margin: 8px 0;
+}
+
+
+.footer-item1 {
+    width: 20%;
+}
+
+@keyframes In {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* tablet width >=740px */
+@media (max-width: 900px) {
+
+    #nav>li>a {
+        display: none;
+    }
+
+    .nav-bars-btn {
+        display: block;
+    }
+
+    .shopping {
+        display: none;
+    }
+
+    .container-one {
+        display: none;
+    }
+
+    .container-two {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container-info-SP {
+        width: 45%;
+    }
+
+    .foooter-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 24px;
+    }
+
+    .footer-item1 {
+        width: 30%;
+    }
+}
